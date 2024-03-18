@@ -14,10 +14,10 @@ class Quote(Document):
     quote = StringField()
 
 
-# Підключення до бази даних MongoDB
-connect(db='first_bd', host='mongodb+srv://divan4ik223:03b.kz2005@dzweb8.m87srrp.mongodb.net/?retryWrites=true&w=majority&appName=dzweb8')
 
-# Завантаження даних з JSON-файлів та їх збереження в базі даних
+connect(db='first_bd', host='link')
+
+
 def load_authors_from_json(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         authors_data = json.load(file)
@@ -48,7 +48,7 @@ def load_quotes_from_json(file_path):
                 quote.save()
 
 
-# Виклик функцій для завантаження даних з файлів
+
 load_authors_from_json('authors.json')
 load_quotes_from_json('quotes.json')
 

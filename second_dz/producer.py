@@ -9,7 +9,7 @@ class Contact(Document):
     email = StringField(required=True)
     sent_message = BooleanField(default=False)
 
-connect('contacts', host='mongodb+srv://divan4ik223:03b.kz2005@dzweb8.m87srrp.mongodb.net/?retryWrites=true&w=majority&appName=dzweb8')
+connect('contacts', host='link')
 
 
 connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
